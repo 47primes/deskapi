@@ -7,6 +7,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'unicorn'
+
+gem 'oauth', '~> 0.4.7'
 gem 'desk', '~> 1.0.0'
 
 group :test do
@@ -15,8 +18,5 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
 
 ruby '2.0.0'

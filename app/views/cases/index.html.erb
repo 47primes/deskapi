@@ -2,10 +2,11 @@
 
 <ul>
 	<% @cases["_embedded"]["entries"].each do |entry| %>
-		<li>
+		<li style="margin-bottom: 10px;">
 			<%= entry["subject"] %>
 			<br />
-			<%= entry["blurb"] %>
+			<%= (entry["blurb"] || "").truncate(100) %>
+			<br />
 			Labels: <%= entry["labels"].join(", ") %>
 		</li>
 	<% end %>

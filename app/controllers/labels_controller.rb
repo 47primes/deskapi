@@ -1,11 +1,11 @@
 class LabelsController < ApplicationController
 
 	def index
-		@labels = Api.labels
+		@labels = Label.list
 	end
 
 	def create
-		
+
 	end
 
 end

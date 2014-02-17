@@ -1,7 +1,7 @@
 class CasesController < ApplicationController
 
 	def index
-		@cases = Api.cases
+		@cases = Case.list
 	end
 
 end

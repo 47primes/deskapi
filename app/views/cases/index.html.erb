@@ -1,1 +1,12 @@
 <h2><%= "#{@cases["total_entries"]} Case".pluralize(@cases["total_entries"]) %></h2>
+
+<ul>
+	<% @cases["_embedded"]["entries"].each do |entry| %>
+		<li>
+			<%= entry["subject"] %>
+			<br />
+			<%= entry["blurb"] %>
+			Labels: <%= entry["labels"].join(", ") %>
+		</li>
+	<% end %>
+</ul>

@@ -1,1 +1,1 @@
-Api.authenticate
+Api.authenticate unless Rails.env.test?

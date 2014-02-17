@@ -1,2 +1,11 @@
 <h2><%= "#{@labels["total_entries"]} Label".pluralize(@labels["total_entries"]) %></h2>
 
+<ul>
+	<% @labels["_embedded"]["entries"].each do |label| %>
+		<li>
+			Name: <%= label["name"] %>
+			<br />
+			Description: <%= label["description"] %>
+		</li>
+	<% end %>
+</ul>
